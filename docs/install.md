@@ -13,11 +13,14 @@ Install RBG into a Kubernetes cluster.
 - At least one node with 1 CPU and 1 GiB memory available for the RBG controller manager.
 - `kubectl` configured to communicate with the cluster.
 - For Helm installation: Helm 3.8 or newer.
-- `gh` CLI authenticated to GitHub, if you install the latest release by tag.
+- If you use the automated latest-release command below, `gh` CLI must be installed and authenticated to GitHub.
 
 ## Install a released version
 
 The recommended path is the published Helm chart.
+
+If you do not have `gh`, set `VERSION` manually from the
+[releases page](https://github.com/sgl-project/rbg/releases).
 
 ```bash
 VERSION=$(gh release view --repo sgl-project/rbg \
